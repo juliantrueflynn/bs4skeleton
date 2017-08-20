@@ -28,13 +28,13 @@ global $product;
 
 	<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
 
-		<span class="sku_wrapper"><?php esc_html_e( 'SKU:', 'woocommerce' ); ?> <span class="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); // WPCS: XSS OK. ?></span></span>
+		<span class="sku_wrapper"><?php esc_html_e( 'SKU:', 'bs4' ); ?> <span class="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'bs4' ); // WPCS: XSS OK. ?></span></span>
 
 	<?php endif; ?>
 
-	<?php echo wc_get_product_category_list( $product->get_id(), ' ', '<div class="posted_in">' . _n( 'Category:', 'Categories:', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</div>' ); // WPCS: XSS OK. ?>
+	<?php echo wc_get_product_category_list( $product->get_id(), ' ', '<div class="posted_in">' . _n( 'Category:', 'Categories:', count( $product->get_category_ids() ), 'bs4' ) . ' ', '</div>' ); // WPCS: XSS OK. ?>
 
-	<?php echo wc_get_product_tag_list( $product->get_id(), ' ', '<div class="tagged_as">' . _n( 'Tag:', 'Tags:', count( $product->get_tag_ids() ), 'woocommerce' ) . ' ', '</div>' ); // WPCS: XSS OK. ?>
+	<?php echo wc_get_product_tag_list( $product->get_id(), ' ', '<div class="tagged_as">' . _n( 'Tag:', 'Tags:', count( $product->get_tag_ids() ), 'bs4' ) . ' ', '</div>' ); // WPCS: XSS OK. ?>
 
 	<?php do_action( 'woocommerce_product_meta_end' ); ?>
 

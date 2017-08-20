@@ -34,12 +34,12 @@ if ( is_user_logged_in() ) {
 	endif; ?>
 
 	<div class="form-row form-row-first form-group">
-		<label for="username"><?php esc_attr_e( 'Username or email', 'woocommerce' ); ?> <span class="required text-danger">*</span></label>
+		<label for="username"><?php esc_attr_e( 'Username or email', 'bs4' ); ?> <span class="required text-danger">*</span></label>
 		<input type="text" class="input-text" name="username" id="username" />
 	</div><!-- .form-group -->
 
 	<div class="form-row form-row-last form-group">
-		<label for="password"><?php esc_attr_e( 'Password', 'woocommerce' ); ?> <span class="required text-danger">*</span></label>
+		<label for="password"><?php esc_attr_e( 'Password', 'bs4' ); ?> <span class="required text-danger">*</span></label>
 		<input class="input-text" type="password" name="password" id="password" />
 	</div><!-- .form-group -->
 
@@ -47,15 +47,15 @@ if ( is_user_logged_in() ) {
 
 	<fieldset class="form-inline">
 		<?php wp_nonce_field( 'woocommerce-login' ); ?>
-		<input type="submit" <?php bs4_btn_class( 'button' ); ?> name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>" />
+		<input type="submit" <?php bs4_btn_class( 'button' ); ?> name="login" value="<?php esc_attr_e( 'Login', 'bs4' ); ?>" />
 		<input type="hidden" name="redirect" value="<?php echo esc_url( $redirect ) ?>" />
 		<label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
-			<input class="woocommerce-form__input woocommerce-form__input-checkbox form-control" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_attr_e( 'Remember me', 'woocommerce' ); ?></span>
+			<input class="woocommerce-form__input woocommerce-form__input-checkbox form-control" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_attr_e( 'Remember me', 'bs4' ); ?></span>
 		</label>
 	</fieldset>
 
 	<p class="lost_password form-text">
-		<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_attr_e( 'Lost your password?', 'woocommerce' ); ?></a>
+		<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_attr_e( 'Lost your password?', 'bs4' ); ?></a>
 	</p>
 
 	<?php do_action( 'woocommerce_login_form_end' ); ?>

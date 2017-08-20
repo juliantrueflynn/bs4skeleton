@@ -26,9 +26,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<table class="shop_table table">
 		<thead>
 			<tr>
-				<th class="product-name"><?php esc_attr_e( 'Product', 'woocommerce' ); ?></th>
-				<th class="product-quantity"><?php esc_attr_e( 'Qty', 'woocommerce' ); ?></th>
-				<th class="product-total"><?php esc_attr_e( 'Totals', 'woocommerce' ); ?></th>
+				<th class="product-name"><?php esc_attr_e( 'Product', 'bs4' ); ?></th>
+				<th class="product-quantity"><?php esc_attr_e( 'Qty', 'bs4' ); ?></th>
+				<th class="product-total"><?php esc_attr_e( 'Totals', 'bs4' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -86,7 +86,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						) );
 					endforeach;
 				else :
-					echo '<li class="woocommerce-notice woocommerce-notice--info woocommerce-info alert alert-info">' . apply_filters( 'woocommerce_no_available_payment_methods_message', __( 'Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements.', 'woocommerce' ) ) . '</li>'; // WPCS: XSS OK.
+					echo '<li class="woocommerce-notice woocommerce-notice--info woocommerce-info alert alert-info">' . apply_filters( 'woocommerce_no_available_payment_methods_message', __( 'Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements.', 'bs4' ) ) . '</li>'; // WPCS: XSS OK.
 				endif;
 				?>
 			</ul>

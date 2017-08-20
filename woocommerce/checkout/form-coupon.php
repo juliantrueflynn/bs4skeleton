@@ -25,7 +25,7 @@ if ( ! wc_coupons_enabled() ) {
 }
 
 if ( empty( WC()->cart->applied_coupons ) ) {
-	$info_message = apply_filters( 'woocommerce_checkout_coupon_message', __( 'Have a coupon?', 'woocommerce' ) . ' <a href="#" class="showcoupon">' . __( 'Click here to enter your code', 'woocommerce' ) . '</a>' );
+	$info_message = apply_filters( 'woocommerce_checkout_coupon_message', __( 'Have a coupon?', 'bs4' ) . ' <a href="#" class="showcoupon">' . __( 'Click here to enter your code', 'bs4' ) . '</a>' );
 	wc_print_notice( $info_message, 'notice' );
 }
 ?>
@@ -33,8 +33,8 @@ if ( empty( WC()->cart->applied_coupons ) ) {
 <form class="checkout_coupon" method="post" style="display:none">
 
 	<div class="form-row form-row-first form-group">
-		<input type="text" name="coupon_code" class="input-text form-control" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" id="coupon_code" value="" />
+		<input type="text" name="coupon_code" class="input-text form-control" placeholder="<?php esc_attr_e( 'Coupon code', 'bs4' ); ?>" id="coupon_code" value="" />
 	</div>
 
-	<input type="submit" <?php bs4_btn_class( 'button' ); ?> name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>" />
+	<input type="submit" <?php bs4_btn_class( 'button' ); ?> name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'bs4' ); ?>" />
 </form>

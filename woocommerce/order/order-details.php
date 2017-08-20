@@ -28,14 +28,14 @@ $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_cu
 
 <section class="woocommerce-order-details">
 
-	<h2 class="woocommerce-order-details__title"><?php esc_attr_e( 'Order details', 'woocommerce' ); ?></h2>
+	<h2 class="woocommerce-order-details__title"><?php esc_attr_e( 'Order details', 'bs4' ); ?></h2>
 
 	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
 
 		<thead>
 			<tr>
-				<th class="woocommerce-table__product-name product-name"><?php esc_attr_e( 'Product', 'woocommerce' ); ?></th>
-				<th class="woocommerce-table__product-table product-total"><?php esc_attr_e( 'Total', 'woocommerce' ); ?></th>
+				<th class="woocommerce-table__product-name product-name"><?php esc_attr_e( 'Product', 'bs4' ); ?></th>
+				<th class="woocommerce-table__product-table product-total"><?php esc_attr_e( 'Total', 'bs4' ); ?></th>
 			</tr>
 		</thead>
 

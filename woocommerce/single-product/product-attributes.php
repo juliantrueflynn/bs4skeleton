@@ -25,14 +25,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 <table class="shop_attributes table">
 	<?php if ( $display_dimensions && $product->has_weight() ) : ?>
 		<tr>
-			<th><?php esc_attr_e( 'Weight', 'woocommerce' ) ?></th>
+			<th><?php esc_attr_e( 'Weight', 'bs4' ) ?></th>
 			<td class="product_weight"><?php echo esc_html( wc_format_weight( $product->get_weight() ) ); ?></td>
 		</tr>
 	<?php endif; ?>
 
 	<?php if ( $display_dimensions && $product->has_dimensions() ) : ?>
 		<tr>
-			<th><?php esc_attr_e( 'Dimensions', 'woocommerce' ) ?></th>
+			<th><?php esc_attr_e( 'Dimensions', 'bs4' ) ?></th>
 			<td class="product_dimensions"><?php echo esc_html( wc_format_dimensions( $product->get_dimensions( false ) ) ); ?></td>
 		</tr>
 	<?php endif; ?>

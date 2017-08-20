@@ -63,7 +63,7 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 									<?php
 									break;
 								case 'download-remaining' :
-									echo is_numeric( $download['downloads_remaining'] ) ? esc_html( $download['downloads_remaining'] ) : esc_attr( '&infin;', 'woocommerce' );
+									echo is_numeric( $download['downloads_remaining'] ) ? esc_html( $download['downloads_remaining'] ) : esc_attr( '&infin;', 'bs4' );
 									break;
 								case 'download-expires' :
 									if ( ! empty( $download['access_expires'] ) ) :
@@ -73,14 +73,14 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 										</time>
 										<?php
 									else :
-										esc_attr_e( 'Never', 'woocommerce' );
+										esc_attr_e( 'Never', 'bs4' );
 									endif;
 									break;
 								case 'download-actions' :
 									$actions = array(
 										'download'  => array(
 											'url'  => $download['download_url'],
-											'name' => __( 'Download', 'woocommerce' ),
+											'name' => __( 'Download', 'bs4' ),
 										),
 									);
 
@@ -106,9 +106,9 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 <?php else : ?>
 	<div class="woocommerce-Message woocommerce-Message--info woocommerce-info">
 		<a <?php bs4_btn_class( 'woocommerce-Button button' ); ?> href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-			<?php esc_html_e( 'Go shop', 'woocommerce' ) ?>
+			<?php esc_html_e( 'Go shop', 'bs4' ) ?>
 		</a>
-		<?php esc_html_e( 'No downloads available yet.', 'woocommerce' ); ?>
+		<?php esc_html_e( 'No downloads available yet.', 'bs4' ); ?>
 	</div>
 <?php endif; ?>
 

@@ -18,7 +18,7 @@ require get_parent_theme_file_path( '/inc/plugins/woocommerce/wc-template-helper
 /*
  * Conditional styles for WooCommerce
  */
-require_once( get_parent_theme_file_path( '/inc/plugins/woocommerce/wc-styles.php' ) );
+require get_parent_theme_file_path( '/inc/plugins/woocommerce/wc-styles.php' );
 
 /*
  * Theme Customizer functions for WooCommerce

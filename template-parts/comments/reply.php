@@ -47,7 +47,7 @@
 					<i class="fa fa-clock-o"></i>
 					<?php printf( // WPCS: XSS OK.
 						/* translators: 1: Comment unix time, 2: Comment date, 3: Comment time */
-						__( '<time class="comment-date" datetime="%1$s">%2$s at %3$s</time>' ),
+						__( '<time class="comment-date" datetime="%1$s">%2$s at %3$s</time>', 'bs4' ),
 						get_comment_time( 'c' ),
 						get_comment_date(),
 						get_comment_time()

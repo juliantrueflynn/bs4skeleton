@@ -23,8 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php wc_print_notices(); ?>
 
-<p class="form-text"><?php esc_attr_e( 'There are some issues with the items in your cart (shown above). Please go back to the cart page and resolve these issues before checking out.', 'woocommerce' ) ?></p>
+<p class="form-text"><?php esc_attr_e( 'There are some issues with the items in your cart (shown above). Please go back to the cart page and resolve these issues before checking out.', 'bs4' ) ?></p>
 
 <?php do_action( 'woocommerce_cart_has_errors' ); ?>
 
-<p><a <?php bs4_btn_class( 'button wc-backward' ); ?> href="<?php echo esc_url( wc_get_page_permalink( 'cart' ) ); ?>"><?php esc_attr_e( 'Return to cart', 'woocommerce' ) ?></a></p>
+<p><a <?php bs4_btn_class( 'button wc-backward' ); ?> href="<?php echo esc_url( wc_get_page_permalink( 'cart' ) ); ?>"><?php esc_attr_e( 'Return to cart', 'bs4' ) ?></a></p>

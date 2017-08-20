@@ -71,7 +71,7 @@ class BS4_Walker_Page extends Walker_Page {
 		if ( '' === $page->post_title ) {
 			$page->post_title = sprintf(
 				/* translators: %d: page ID. */
-				__( '#%d (no title)' ),
+				__( '#%d (no title)', 'bs4' ),
 				$page->ID
 			);
 		}

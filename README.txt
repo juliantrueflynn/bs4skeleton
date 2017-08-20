@@ -5,7 +5,7 @@ Tested up to: WordPress 4.8
 Version: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: bootstrap, bootstrap-4, font-awesome, one-column, two-columns, right-sidebar, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, sticky-post, threaded-comments, woocommerce
+Tags: one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, sticky-post, threaded-comments
 
 == Description ==
 

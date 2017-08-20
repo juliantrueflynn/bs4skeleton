@@ -171,7 +171,7 @@ if ( ! function_exists( 'bs4_get_the_comments_pagination' ) ) {
 			'prev_text'          => esc_attr__( 'Previous', 'bs4' ),
 			'next_text'          => esc_attr__( 'Next', 'bs4' ),
 			'before_page_number' => '<span class="sr-only">' . esc_html__( 'Comment page', 'bs4' ) . '</span> ',
-			'screen_reader_text' => esc_attr__( 'Comments pagination' ),
+			'screen_reader_text' => esc_attr__( 'Comments pagination', 'bs4' ),
 			'add_fragment'       => '#comments',
 		);
 

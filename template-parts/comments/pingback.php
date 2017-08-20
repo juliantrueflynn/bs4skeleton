@@ -9,7 +9,7 @@
 
 <<?php echo esc_attr( $tag ); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( array( 'pingback', 'card' ), $comment ); ?>>
 	<div class="card-body">
-		<span class="pingback-title"><?php esc_attr_e( 'Pingback:' ); ?></span>
+		<span class="pingback-title"><?php esc_attr_e( 'Pingback:', 'bs4' ); ?></span>
 		<span class="pingback-content"><?php comment_author_link( $comment ); ?></span>
 
 		<?php if ( current_user_can( 'edit_comment', $comment->comment_ID ) ) : ?>

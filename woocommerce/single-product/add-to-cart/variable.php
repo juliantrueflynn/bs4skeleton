@@ -30,7 +30,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	<?php do_action( 'woocommerce_before_variations_form' ); ?>
 
 	<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
-		<p class="stock out-of-stock"><?php esc_attr_e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>
+		<p class="stock out-of-stock"><?php esc_attr_e( 'This product is currently out of stock and unavailable.', 'bs4' ); ?></p>
 	<?php else : ?>
 		<table class="variations table table-sm" cellspacing="0">
 			<tbody>
@@ -50,7 +50,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 									'product' => $product,
 									'selected' => $selected,
 								) );
-								echo end( $attribute_keys ) === $attribute_name ? apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__( 'Clear', 'woocommerce' ) . '</a>' ) : ''; // WPCS: XSS OK.
+								echo end( $attribute_keys ) === $attribute_name ? apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__( 'Clear', 'bs4' ) . '</a>' ) : ''; // WPCS: XSS OK.
 							?>
 						</td>
 					</tr>

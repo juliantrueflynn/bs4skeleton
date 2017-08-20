@@ -24,14 +24,14 @@ wc_print_notices(); ?>
 
 <form method="post" class="woocommerce-ResetPassword lost_reset_password">
 
-	<p><?php echo apply_filters( 'woocommerce_reset_password_message', esc_attr_e( 'Enter a new password below.', 'woocommerce' ) ); // WPCS: XSS OK. ?></p>
+	<p><?php echo apply_filters( 'woocommerce_reset_password_message', esc_attr_e( 'Enter a new password below.', 'bs4' ) ); // WPCS: XSS OK. ?></p>
 
 	<div class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first form-group">
-		<label for="password_1"><?php esc_attr_e( 'New password', 'woocommerce' ); ?> <span class="required text-danger">*</span></label>
+		<label for="password_1"><?php esc_attr_e( 'New password', 'bs4' ); ?> <span class="required text-danger">*</span></label>
 		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password_1" id="password_1" />
 	</div><!-- .form-group -->
 	<div class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last form-group">
-		<label for="password_2"><?php esc_attr_e( 'Re-enter new password', 'woocommerce' ); ?> <span class="required text-danger">*</span></label>
+		<label for="password_2"><?php esc_attr_e( 'Re-enter new password', 'bs4' ); ?> <span class="required text-danger">*</span></label>
 		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password_2" id="password_2" />
 	</div><!-- .form-group -->
 
@@ -41,7 +41,7 @@ wc_print_notices(); ?>
 	<?php do_action( 'woocommerce_resetpassword_form' ); ?>
 
 	<input type="hidden" name="wc_reset_password" value="true" />
-	<input type="submit" <?php bs4_btn_class( 'woocommerce-Button button' ); ?> value="<?php esc_attr_e( 'Save', 'woocommerce' ); ?>" />
+	<input type="submit" <?php bs4_btn_class( 'woocommerce-Button button' ); ?> value="<?php esc_attr_e( 'Save', 'bs4' ); ?>" />
 
 	<?php wp_nonce_field( 'reset_password' ); ?>
 

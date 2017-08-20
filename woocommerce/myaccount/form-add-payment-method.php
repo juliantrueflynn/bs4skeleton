@@ -53,10 +53,10 @@ if ( $available_gateways ) : ?>
 			</ul>
 
 			<?php wp_nonce_field( 'woocommerce-add-payment-method' ); ?>
-			<input type="submit" <?php bs4_btn_class( 'woocommerce-Button woocommerce-Button--alt button alt' ); ?> id="place_order" value="<?php esc_attr_e( 'Add payment method', 'woocommerce' ); ?>" />
+			<input type="submit" <?php bs4_btn_class( 'woocommerce-Button woocommerce-Button--alt button alt' ); ?> id="place_order" value="<?php esc_attr_e( 'Add payment method', 'bs4' ); ?>" />
 			<input type="hidden" name="woocommerce_add_payment_method" id="woocommerce_add_payment_method" value="1" />
 		</div>
 	</form>
 <?php else : ?>
-	<p class="woocommerce-notice woocommerce-notice--info woocommerce-info"><?php esc_html_e( 'Sorry, it seems that there are no payment methods which support adding a new payment method. Please contact us if you require assistance or wish to make alternate arrangements.', 'woocommerce' ); ?></p>
+	<p class="woocommerce-notice woocommerce-notice--info woocommerce-info"><?php esc_html_e( 'Sorry, it seems that there are no payment methods which support adding a new payment method. Please contact us if you require assistance or wish to make alternate arrangements.', 'bs4' ); ?></p>
 <?php endif; ?>

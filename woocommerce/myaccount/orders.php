@@ -48,7 +48,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 
 							<?php elseif ( 'order-number' === $column_id ) : ?>
 								<a href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
-									<?php echo _x( '#', 'hash before order number', 'woocommerce' ) . $order->get_order_number(); // WPCS: XSS OK. ?>
+									<?php echo _x( '#', 'hash before order number', 'bs4' ) . $order->get_order_number(); // WPCS: XSS OK. ?>
 								</a>
 
 							<?php elseif ( 'order-date' === $column_id ) : ?>
@@ -60,7 +60,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 							<?php elseif ( 'order-total' === $column_id ) : ?>
 								<?php
 								/* translators: 1: formatted order total 2: total order items */
-								printf( _n( '%1$s for %2$s item', '%1$s for %2$s items', $item_count, 'woocommerce' ), $order->get_formatted_order_total(), $item_count ); // WPCS: XSS OK.
+								printf( _n( '%1$s for %2$s item', '%1$s for %2$s items', $item_count, 'bs4' ), $order->get_formatted_order_total(), $item_count ); // WPCS: XSS OK.
 								?>
 
 							<?php elseif ( 'order-actions' === $column_id ) : ?>
@@ -68,15 +68,15 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 								$actions = array(
 									'pay'    => array(
 										'url'  => $order->get_checkout_payment_url(),
-										'name' => __( 'Pay', 'woocommerce' ),
+										'name' => __( 'Pay', 'bs4' ),
 									),
 									'view'   => array(
 										'url'  => $order->get_view_order_url(),
-										'name' => __( 'View', 'woocommerce' ),
+										'name' => __( 'View', 'bs4' ),
 									),
 									'cancel' => array(
 										'url'  => $order->get_cancel_order_url( wc_get_page_permalink( 'myaccount' ) ),
-										'name' => __( 'Cancel', 'woocommerce' ),
+										'name' => __( 'Cancel', 'bs4' ),
 									),
 								);
 
@@ -111,11 +111,11 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 	<?php if ( 1 < $customer_orders->max_num_pages ) : ?>
 		<div class="woocommerce-pagination woocommerce-pagination--without-numbers woocommerce-Pagination">
 			<?php if ( 1 !== $current_page ) : ?>
-				<a <?php bs4_btn_class( 'woocommerce-button woocommerce-button--previous woocommerce-Button woocommerce-Button--previous button' ); ?> href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page - 1 ) ); ?>"><?php esc_attr_e( 'Previous', 'woocommerce' ); ?></a>
+				<a <?php bs4_btn_class( 'woocommerce-button woocommerce-button--previous woocommerce-Button woocommerce-Button--previous button' ); ?> href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page - 1 ) ); ?>"><?php esc_attr_e( 'Previous', 'bs4' ); ?></a>
 			<?php endif; ?>
 
 			<?php if ( intval( $customer_orders->max_num_pages ) !== $current_page ) : ?>
-				<a <?php bs4_btn_class( 'woocommerce-button woocommerce-button--next woocommerce-Button woocommerce-Button--next button' ); ?> href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page + 1 ) ); ?>"><?php esc_attr_e( 'Next', 'woocommerce' ); ?></a>
+				<a <?php bs4_btn_class( 'woocommerce-button woocommerce-button--next woocommerce-Button woocommerce-Button--next button' ); ?> href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page + 1 ) ); ?>"><?php esc_attr_e( 'Next', 'bs4' ); ?></a>
 			<?php endif; ?>
 		</div>
 	<?php endif; ?>
@@ -123,9 +123,9 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 <?php else : ?>
 	<div class="woocommerce-message woocommerce-message--info woocommerce-Message woocommerce-Message--info woocommerce-info">
 		<a <?php bs4_btn_class( 'woocommerce-Button button' ); ?> href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-			<?php esc_attr_e( 'Go shop', 'woocommerce' ) ?>
+			<?php esc_attr_e( 'Go shop', 'bs4' ) ?>
 		</a>
-		<?php esc_attr_e( 'No order has been made yet.', 'woocommerce' ); ?>
+		<?php esc_attr_e( 'No order has been made yet.', 'bs4' ); ?>
 	</div>
 <?php endif; ?>
 

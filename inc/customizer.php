@@ -260,7 +260,7 @@ function bs4_customize_register( $wp_customize ) {
 	}
 
 	$wp_customize->add_control( new BS4_Multi_Checkbox_WP_Customize_Control( $wp_customize, 'hide_header_parts', array(
-		'label' => __( 'Hide header parts' ),
+		'label' => __( 'Hide header parts', 'bs4' ),
 		'section' => 'bs4_header',
 		'type' => 'multi_checkbox',
 		'description' => __( 'Check off any parts of the header to hide.', 'bs4' ),
@@ -356,7 +356,7 @@ function bs4_customize_register( $wp_customize ) {
 	}
 
 	$wp_customize->add_control( new BS4_Multi_Checkbox_WP_Customize_Control( $wp_customize, 'hide_footer_parts', array(
-		'label' => __( 'Hide footer parts' ),
+		'label' => __( 'Hide footer parts', 'bs4' ),
 		'section' => 'bs4_footer',
 		'type' => 'multi_checkbox',
 		'description' => __( 'Check off any parts of the theme to hide.', 'bs4' ),

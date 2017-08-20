@@ -23,27 +23,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <section class="woocommerce-customer-details">
 
-	<h2><?php esc_attr_e( 'Customer details', 'woocommerce' ); ?></h2>
+	<h2><?php esc_attr_e( 'Customer details', 'bs4' ); ?></h2>
 
 	<table class="woocommerce-table woocommerce-table--customer-details shop_table customer_details table">
 
 		<?php if ( $order->get_customer_note() ) : ?>
 			<tr>
-				<th><?php esc_attr_e( 'Note:', 'woocommerce' ); ?></th>
+				<th><?php esc_attr_e( 'Note:', 'bs4' ); ?></th>
 				<td><?php echo wptexturize( $order->get_customer_note() ); ?></td>
 			</tr>
 		<?php endif; ?>
 
 		<?php if ( $order->get_billing_email() ) : ?>
 			<tr>
-				<th><?php esc_attr_e( 'Email:', 'woocommerce' ); ?></th>
+				<th><?php esc_attr_e( 'Email:', 'bs4' ); ?></th>
 				<td><?php echo esc_html( $order->get_billing_email() ); ?></td>
 			</tr>
 		<?php endif; ?>
 
 		<?php if ( $order->get_billing_phone() ) : ?>
 			<tr>
-				<th><?php esc_attr_e( 'Phone:', 'woocommerce' ); ?></th>
+				<th><?php esc_attr_e( 'Phone:', 'bs4' ); ?></th>
 				<td><?php echo esc_html( $order->get_billing_phone() ); ?></td>
 			</tr>
 		<?php endif; ?>
@@ -60,10 +60,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php endif; ?>
 
-			<h3 class="woocommerce-column__title"><?php esc_attr_e( 'Billing address', 'woocommerce' ); ?></h3>
+			<h3 class="woocommerce-column__title"><?php esc_attr_e( 'Billing address', 'bs4' ); ?></h3>
 
 			<address>
-				<?php echo ( $address = $order->get_formatted_billing_address() ) ? $address : __( 'N/A', 'woocommerce' ); ?>
+				<?php echo ( $address = $order->get_formatted_billing_address() ) ? $address : __( 'N/A', 'bs4' ); ?>
 			</address>
 
 			<?php if ( ! wc_ship_to_billing_address_only() && $order->needs_shipping_address() ) : ?>
@@ -72,10 +72,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="woocommerce-column woocommerce-column--2 woocommerce-column--shipping-address col-2">
 
-			<h3 class="woocommerce-column__title"><?php esc_attr_e( 'Shipping address', 'woocommerce' ); ?></h3>
+			<h3 class="woocommerce-column__title"><?php esc_attr_e( 'Shipping address', 'bs4' ); ?></h3>
 
 			<address>
-				<?php echo ( $address = $order->get_formatted_shipping_address() ) ? $address : __( 'N/A', 'woocommerce' ); ?>
+				<?php echo ( $address = $order->get_formatted_shipping_address() ) ? $address : __( 'N/A', 'bs4' ); ?>
 			</address>
 
 		</div><!-- /.col-2 -->
