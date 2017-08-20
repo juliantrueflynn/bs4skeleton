@@ -55,6 +55,8 @@
 				) );
 				?>
 			</div><!-- .entry-summary -->
+
+			<?php get_template_part( 'template-parts/single/single', 'meta-footer' ); ?>
 		</div><!-- .card-body -->
 	</div><!-- .card -->
 </article><!-- #post-## -->

@@ -145,12 +145,12 @@ function bs4_customize_register( $wp_customize ) {
 	) );
 
 	// Add setting: Category badge color.
-	$wp_customize->add_setting( 'badge_color_post_cat', array(
+	$wp_customize->add_setting( 'badge_color_category', array(
 		'default' => 'primary',
 		'sanitize_callback' => 'bs4_sanitize_select_or_radio',
 	) );
 
-	$wp_customize->add_control( 'badge_color_post_cat', array(
+	$wp_customize->add_control( 'badge_color_category', array(
 		'label' => __( 'Category badge color', 'bs4' ),
 		'section' => 'colors',
 		'type' => 'select',
@@ -335,7 +335,7 @@ function bs4_customize_register( $wp_customize ) {
 		'label' => __( 'Copyright text', 'bs4' ),
 		'section' => 'bs4_footer',
 		'type' => 'text',
-		'description' => __( '%year% = Current year.<br>%title% = Site title with link.', 'bs4' ),
+		'description' => __( '--year = Current year.<br>--title = Site title with link.', 'bs4' ),
 	) );
 
 	// Hide footer parts choices.

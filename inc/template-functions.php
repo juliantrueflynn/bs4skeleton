@@ -506,27 +506,47 @@ function bs4_get_custom_logo( $html ) {
 add_filter( 'get_custom_logo', 'bs4_get_custom_logo' );
 
 /**
- * Filters the_terms links to make compatible with Bootstrap 4 badges.
+ * Filters product categories list to make compatible with Bootstrap 4 badges.
  *
- * @param array  $term_list List of terms to display.
- * @param string $taxonomy  The taxonomy name.
+ * @param array $links List of terms to display.
  */
-function bs4_the_terms_badge( $term_list, $taxonomy ) {
-	$term_class = '';
+function bs4_post_categories_list( $links ) {
+	return bs4_term_link_badge_html( $links, 'category' );
+}
+add_filter( 'term_links-category', 'bs4_post_categories_list' );
 
+/**
+ * Filters product tags list to make compatible with Bootstrap 4 badges.
+ *
+ * @param array $links List of terms to display.
+ */
+function bs4_post_tags_list( $links ) {
+	return bs4_term_link_badge_html( $links, 'post_tag' );
+}
+add_filter( 'term_links-post_tag', 'bs4_post_tags_list' );
+
+/**
+ * Output HTML for WooCommerce taxonomy term link.
+ *
+ * @param array  $html     List of terms to display.
+ * @param string $taxonomy Taxonomy name.
+ */
+function bs4_term_link_badge_html( $html, $taxonomy ) {
+	$classes = '';
 	if ( 'category' === $taxonomy ) {
-		$term_class = 'badge-' . get_theme_mod( "badge_color_{$taxonomy}", 'primary' );
+		$badge_class = 'bg-' . get_theme_mod( 'badge_color_category', 'primary' );
+		$classes = join( ' ', bs4_get_badge_class( sanitize_html_class( $badge_class ) ) );
 	} elseif ( 'post_tag' === $taxonomy ) {
-		$term_class = 'badge-' . get_theme_mod( "badge_color_{$taxonomy}", 'secondary' );
+		$badge_class = 'bg-' . get_theme_mod( 'badge_color_category', 'secondary' );
+		$classes = join( ' ', bs4_get_badge_class( sanitize_html_class( $badge_class ) ) );
 	}
 
-	$classes = join( ' ', bs4_get_badge_class( array( $term_class, $taxonomy . '-badge' ) ) );
+	if ( '' !== $classes ) {
+		$html = str_replace( ' rel="tag"', ' class="' . esc_attr( $classes ) . '" rel="tag"', $html );
+	}
 
-	$term_list = str_replace( ' rel="tag"', ' class="' . esc_attr( $classes ) . '" rel="tag"', $term_list );
-
-	return $term_list;
+	return $html;
 }
-add_filter( 'the_terms', 'bs4_the_terms_badge', 10, 2 );
 
 /**
  * Filter the_content to make HTML elements compatible with Bootstrap.
