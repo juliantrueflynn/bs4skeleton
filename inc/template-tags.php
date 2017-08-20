@@ -340,8 +340,7 @@ if ( ! function_exists( 'bs4_copyright_text' ) ) {
 	 * Display the site copyright text.
 	 */
 	function bs4_copyright_text() {
-		$default = esc_attr__( 'Copyright %title% %year%', 'bs4' );
-		$copyright_text = apply_filters( 'bs4_footer_copyright_text', get_theme_mod( 'footer_copyright_text', $default ) );
+		$copyright_text = apply_filters( 'bs4_footer_copyright_text', get_theme_mod( 'footer_copyright_text', __( 'Copyright --title --year', 'bs4' ) ) );
 
 		$output = '';
 
@@ -353,8 +352,8 @@ if ( ! function_exists( 'bs4_copyright_text' ) ) {
 			);
 
 			// Replace %year% with the year.
-			$output = str_replace( '%year%', date( 'Y' ), $copyright_text );
-			$output = str_replace( '%title%', $linked_title, $output );
+			$output = str_replace( '--year', date( 'Y' ), $copyright_text );
+			$output = str_replace( '--title', $linked_title, $output );
 		}
 
 		echo $output; // WPCS: XSS OK.

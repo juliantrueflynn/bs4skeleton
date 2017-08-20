@@ -327,7 +327,7 @@ function bs4_customize_register( $wp_customize ) {
 
 	// Add setting: Post column width.
 	$wp_customize->add_setting( 'footer_copyright_text', array(
-		'default' => esc_attr__( 'Copyright %title% %year%', 'bs4' ),
+		'default' => __( 'Copyright --title --year', 'bs4' ),
 		'sanitize_callback' => 'esc_attr',
 	) );
 
