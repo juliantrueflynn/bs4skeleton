@@ -75,8 +75,7 @@ Tags: one-column, two-columns, right-sidebar, custom-colors, custom-header, cust
 --------------------------------------------------------------*/
 
 .wp-caption, .wp-caption-text, .gallery-caption {
-	max-width: 100%;
-	height: auto;
+	display: block;
 }
 
 /*--------------------------------------------------------------

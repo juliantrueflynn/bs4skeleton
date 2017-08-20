@@ -33,8 +33,8 @@ $i = 0;
 	</div><!-- .row -->
 
 	<?php the_posts_navigation( array(
-		'next_text' => __( 'Next' ) . ' <i class="fa fa-arrow-right"></i>',
-		'prev_text' => '<i class="fa fa-arrow-left"></i> ' . __( 'Previous' ),
+		'next_text' => __( 'Next', 'bs4' ) . ' <i class="fa fa-arrow-right"></i>',
+		'prev_text' => '<i class="fa fa-arrow-left"></i> ' . __( 'Previous', 'bs4' ),
 	) ); ?>
 
 <?php

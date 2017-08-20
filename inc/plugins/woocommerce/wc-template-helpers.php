@@ -107,7 +107,7 @@ if ( ! function_exists( 'woocommerce_form_field' ) ) {
 
 		if ( $args['required'] ) {
 			$args['class'][] = 'validate-required';
-			$required = ' <abbr class="required text-danger" title="' . esc_attr__( 'required', 'woocommerce' ) . '">*</abbr>';
+			$required = ' <abbr class="required text-danger" title="' . esc_attr__( 'required', 'bs4' ) . '">*</abbr>';
 		} else {
 			$required = '';
 		}
@@ -157,14 +157,14 @@ if ( ! function_exists( 'woocommerce_form_field' ) ) {
 						$args['custom_attributes'] ? implode( ' ', $args['custom_attributes'] ) : ''
 					);
 
-					$field .= '<option value="">' . esc_html__( 'Select a country&hellip;', 'woocommerce' ) . '</option>';
+					$field .= '<option value="">' . esc_html__( 'Select a country&hellip;', 'bs4' ) . '</option>';
 
 					foreach ( $countries as $ckey => $cvalue ) {
 						$field .= '<option value="' . esc_attr( $ckey ) . '" ' . selected( $value, $ckey, false ) . '>' . $cvalue . '</option>';
 					}
 
 					$field .= '</select>';
-					$field .= '<noscript><input type="submit" name="woocommerce_checkout_update_totals" value="' . esc_attr__( 'Update country', 'woocommerce' ) . '" /></noscript>';
+					$field .= '<noscript><input type="submit" name="woocommerce_checkout_update_totals" value="' . esc_attr__( 'Update country', 'bs4' ) . '" /></noscript>';
 				}
 
 				break;
@@ -177,7 +177,7 @@ if ( ! function_exists( 'woocommerce_form_field' ) ) {
 					$field .= '<input type="hidden" class="hidden" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" value="" ' . implode( ' ', $args['custom_attributes'] ) . ' placeholder="' . esc_attr( $args['placeholder'] ) . '" />';
 				} elseif ( ! is_null( $for_country ) && is_array( $states ) ) {
 					$states_list = array();
-					$states_list[''] = esc_html__( 'Select a state&hellip;', 'woocommerce' );
+					$states_list[''] = esc_html__( 'Select a state&hellip;', 'bs4' );
 					foreach ( $states as $ckey => $cvalue ) {
 						$states_list[ esc_attr( $ckey ) ] = $cvalue;
 					}
@@ -233,7 +233,7 @@ if ( ! function_exists( 'woocommerce_form_field' ) ) {
 						if ( '' === $option_key ) {
 							// If we have a blank option, select2 needs a placeholder.
 							if ( empty( $args['placeholder'] ) ) {
-								$args['placeholder'] = $option_text ? $option_text : __( 'Choose an option', 'woocommerce' );
+								$args['placeholder'] = $option_text ? $option_text : __( 'Choose an option', 'bs4' );
 							}
 
 							$args['custom_attributes'] .= ' data-allow_clear="true"';

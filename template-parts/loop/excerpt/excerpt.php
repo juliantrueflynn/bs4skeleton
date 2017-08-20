@@ -18,8 +18,8 @@ if ( have_posts() ) :
 	endwhile; // Close the loop.
 
 	the_posts_navigation( array(
-		'next_text' => __( 'Next' ) . ' <i class="fa fa-arrow-right"></i>',
-		'prev_text' => '<i class="fa fa-arrow-left"></i> ' . __( 'Previous' ),
+		'next_text' => __( 'Next', 'bs4' ) . ' <i class="fa fa-arrow-right"></i>',
+		'prev_text' => '<i class="fa fa-arrow-left"></i> ' . __( 'Previous', 'bs4' ),
 	) );
 
 endif;
